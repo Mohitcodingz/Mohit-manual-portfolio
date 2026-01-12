@@ -1,0 +1,14 @@
+Where I commonly mistakes? *margin:20px,
+height:100vh on body
+default code:- * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: box-border;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+/* why the page was going outside of it's area! that is because of the limited size of the the box and the content going outside of the limited size that was causing the content going out... */

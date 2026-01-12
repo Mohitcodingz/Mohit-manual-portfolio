@@ -1,0 +1,215 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, rgb(0, 0, 39), rgb(0, 0, 107));
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        height: 90px;
+        background-color: transparent;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* theme work */
+
+    body.dark {
+        background: linear-gradient(to bottom, rgb(0, 0, 39), rgb(0, 0, 107));
+        color: white;
+    }
+
+    body.dark .leftHeader {
+        color: white;
+    }
+
+    body.dark .planet {
+        background-color: rgb(9, 120, 255);
+    }
+
+
+    body.dark .cards:hover {
+        box-shadow: 0 1px 50px rgb(167, 167, 167);
+    }
+
+    body.light {
+        background: linear-gradient(to bottom, white, rgb(162, 232, 255));
+        color: black;
+    }
+
+    body.light .projects-cards a {
+        color: black;
+    }
+
+    body.light .leftHeader {
+        color: rgb(0, 0, 0);
+    }
+
+    body.light .cards {
+        background-color: aqua;
+    }
+
+    body.light .cards:hover {
+        box-shadow: 0 1px 50px rgb(167, 167, 167);
+    }
+
+    body.light .planet {
+        background-color: #4a90ff;
+    }
+
+    /* CENTElightR TEXT BLOCK (LOCKED WIDTH) */
+    .leftHeader {
+        width: 200px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        font-size: 21px;
+        text-shadow: 1px 1px 5px rgb(218, 255, 249);
+        text-decoration: none;
+    }
+
+    /* RIGHT BUTTON */
+    .rightHeader {
+        width: 200px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+    }
+
+    .themebox {
+        width: 30px;
+        height: 28px;
+        background-color: antiquewhite;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .themebox:hover {
+        cursor: pointer;
+    }
+
+    /* styling for section */
+    .projects {
+        width: 100%;
+        height: 364px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1px;
+    }
+
+    .cards {
+        width: 200px;
+        height: 50px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        animation: buttonanimation 2s linear infinite;
+    }
+
+    .projects-cards a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .cards:hover {
+        background-color: #2374ff;
+        cursor: pointer;
+
+    }
+
+    @keyframes buttonanimation {
+        0% {
+            border-left-color: rgb(229, 255, 0);
+        }
+
+        25% {
+            border-top-color: rgb(229, 255, 0);
+        }
+
+        50% {
+            border-right-color: rgb(229, 255, 0);
+        }
+
+        75% {
+            border-bottom-color: rgb(229, 255, 0);
+        }
+
+    }
+
+    /* planets works  */
+    .planets {
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin: 40px 0;
+        text-decoration: none;
+    }
+
+    .planet {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #0F2854;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(239, 181, 181);
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+        text-decoration: none;
+    }
+
+
+    .planet:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        text-shadow: 0 0 5px yellow;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .cursor-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: rgba(74, 144, 255, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease-out;
+        z-index: 9999;
+    }
